@@ -1,5 +1,6 @@
 Sub first_macro()
 
 MsgBox ("First Macro Code")
+MsgBox 100
 
 End Sub
