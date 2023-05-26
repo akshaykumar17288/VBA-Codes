@@ -1,2 +1,2 @@
 # VBA-Codes
-Contains all the VBA Codes learned from the course
+Contains all the VBA Codes practised
