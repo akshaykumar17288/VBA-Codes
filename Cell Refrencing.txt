@@ -1,0 +1,18 @@
+Sub cell_refrencing()
+
+' Print a value in the active cell
+ActiveCell.Value = "Print"
+ActiveCell.Value = 100
+
+' Print value in any specified cell or cells
+[A5] = "Hello"
+[C1:C5] = "Print"
+
+' We can also use cells to go to the cell by defining row and column index
+Cells(5, 5).Value = "VBA"
+
+'Another method is to use Range to print value in particular cells
+Range("h1").Value = "India"
+Range("h2:h10") = "Delhi"
+
+End Sub

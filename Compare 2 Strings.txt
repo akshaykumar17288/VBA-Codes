@@ -1,0 +1,27 @@
+Option Explicit
+Sub compare()
+
+Dim array1(3) As String
+Dim array2(7) As String
+Dim a As Long
+    For a = 0 To 3
+    array1(a) = Range("b" & a + 1).Value
+    
+Next a
+
+    For a = 0 To 7
+    array2(a) = Range("e" & a + 1).Value
+Next a
+Dim loop1 As Long, loop2 As Long, match As String
+For loop1 = 0 To 3
+    For loop2 = 0 To 7
+    If array1(loop1) = array2(loop2) Then
+    match = match & "," & array1(loop1)
+    Exit For
+    Else
+    End If
+    
+    Next loop2
+Next loop1
+MsgBox "yes" & match
+End Sub

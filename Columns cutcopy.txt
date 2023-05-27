@@ -1,0 +1,37 @@
+Sub columns_paste()
+
+'select sheet
+Sheets("VBA").Select
+
+'select the cell
+Range("a1").Select
+
+'Select complete column
+Range(Selection, Selection.End(xlDown)).Select
+
+'Copy the selected part
+Selection.Copy
+
+'Go to desired cell
+Range("h1").Select
+
+'Paste the selected value
+ActiveSheet.Paste
+
+'Paste selected data below already filled values
+Range("h1").Select
+Selection.End(xlDown).Select
+Selection.End(xlDown).Select
+Selection.End(xlUp).Select
+ActiveCell.offset(1, 0).Select
+ActiveSheet.Paste
+
+'Go to another cell to paste transposed data
+Range("k1").Select
+Selection.PasteSpecial Paste:=xlPasteAll, Operation:=xlNone, Skipblanks:=False, Transpose:=True
+
+'Save the file
+ActiveWorkbook.Save
+
+
+End Sub

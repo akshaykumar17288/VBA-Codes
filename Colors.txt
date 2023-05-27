@@ -1,0 +1,39 @@
+Sub color()
+
+'First print a value in cells
+Range("a1:a10") = "VBA"
+
+'8 Standard colors
+Range("a1:a10").Font.color = vbWhite
+Range("a1:a10").Font.color = vbBlack
+Range("a1:a10").Font.color = vbYellow
+Range("a1:a10").Font.color = vbRed
+Range("a1:a10").Font.color = vbGreen
+Range("a1:a10").Font.color = vbBlue
+Range("a1:a10").Font.color = vbCyan
+Range("a1:a10").Font.color = vbMagenta
+
+'Color Index till 56
+Range("a1:a10").Font.ColorIndex = 1
+Range("a1:a10").Font.ColorIndex = 10
+Range("a1:a10").Font.ColorIndex = 50
+
+'Apart from font we can also assign background colors
+
+'8 Standard colors
+Range("a1:a10").Interior.color = vbWhite
+Range("a1:a10").Interior.color = vbBlack
+Range("a1:a10").Interior.color = vbYellow
+Range("a1:a10").Interior.color = vbRed
+Range("a1:a10").Interior.color = vbGreen
+Range("a1:a10").Interior.color = vbBlue
+Range("a1:a10").Interior.color = vbCyan
+Range("a1:a10").Interior.color = vbMagenta
+
+'Color Index till 56
+Range("a1:a10").Interior.ColorIndex = 1
+Range("a1:a10").Interior.ColorIndex = 20
+Range("a1:a10").Interior.ColorIndex = 40
+
+
+End Sub

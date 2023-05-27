@@ -1,0 +1,15 @@
+Sub copy_paste()
+
+'First print a value in cells
+Range("a1:a5") = "VBA"
+
+'1st method
+Range("b1:b5") = Range("a1:a5").Value
+
+'2nd method
+Range("a1:a5").Copy
+Range("c1:c5").PasteSpecial
+'To remove selection
+Application.CutCopyMode = False
+
+End Sub

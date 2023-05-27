@@ -1,0 +1,30 @@
+Sub font()
+
+Range("a1:a10") = "VBA"
+
+Range("a1:a10").font.Name = "Arial"
+Range("a1:a10").font.Bold = True
+Range("a1:a10").font.Size = 20
+Range("a1:a10").font.Italic = True
+Range("a1:a10").font.Underline = True
+
+End Sub
+
+
+--------------------------------------------------------------------------------------------------------
+
+Sub font()
+
+Range("a1:a10") = "VBA"
+
+With Range("a1:a10").font
+
+	.Name = "Arial"
+	.Bold = True
+	.Size = 20
+	.Italic = True
+	.Underline = True
+
+  End With
+
+End Sub

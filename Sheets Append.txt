@@ -1,0 +1,23 @@
+Option Explicit
+
+Sub sheets_append()
+
+Dim s As Long
+For s = 1 To Sheets("New").Range("I1").Value
+    Sheets(s).Select
+    Range("a2").Select
+    Range(Selection, Selection.End(xlToRight)).Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Selection.Copy
+    Sheets("New").Select
+    Range("a15000").End(xlUp).offset(1, 0).Select
+    ActiveCell.PasteSpecial xlPasteAll
+
+Next s
+MsgBox ("Data Appended")
+
+'Save the file
+ActiveWorkbook.Save
+
+
+End Sub

@@ -1,0 +1,44 @@
+Option Explicit
+
+Sub sheets_add_delete()
+
+'Add 1 sheet before 1st sheet
+Sheets.Add Sheets("Sheet1")
+
+'Add 1 sheet after 1st sheet
+Sheets.Add , Sheets("Sheet1")
+
+'Add 2 sheets at the end
+Sheets.Add , Sheets(Sheets.Count), 2
+
+'Delete sheets
+Application.DisplayAlerts = False
+
+Sheets("Sheet5").Delete
+Sheets("Sheet6").Delete
+Sheets("Sheet7").Delete
+Sheets("Sheet8").Delete
+
+
+'Delete all sheets except 1st one
+Dim s As Long
+For s = Sheets.Count To 2 Step -1
+    Sheets(s).Select
+    ActiveSheet.Delete
+    
+Next s
+
+Application.DisplayAlerts = True
+
+
+End Sub
+
+Sub sheets_copy_rename()
+
+Sheets(1).Name = "1st"
+Sheets("Sheet2").Name = "2nd"
+
+Sheets("2nd").Copy after:=Sheets("2nd")
+ActiveSheet.Name = "2nd Copy"
+
+End Sub

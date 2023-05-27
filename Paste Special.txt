@@ -1,0 +1,17 @@
+Sub paste_special()
+
+'First print a value in cells
+Range("a1:a10") = "VBA"
+
+Range("a1:a10").Copy
+
+Range("b1:b10").PasteSpecial xlPasteFormats
+Range("b1:b10").PasteSpecial xlPasteColumnWidths
+Range("c1:c10").PasteSpecial xlPasteValues
+
+'Similarly we can also paste formulas
+Range("a1:a10").PasteSpecial xlPasteFormulas
+
+Application.CutCopyMode = False
+
+End Sub
